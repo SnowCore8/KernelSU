@@ -95,6 +95,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "atomic-waker"
+version = "1.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1505bd5d3d116872e7271a6d4e16d81d0c8570876c8de68093a09ac269d8aac0"
+
+[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -696,15 +702,15 @@ checksum = "b6c80984affa11d98d1b88b66ac8853f143217b399d3c74116778ff8fdb4ed2e"
 
 [[package]]
 name = "h2"
-version = "0.4.2"
+version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "31d030e59af851932b72ceebadf4a2b5986dba4c3b99dd2493f8273a0f151943"
+checksum = "fa82e28a107a8cc405f0839610bdc9b15f1e25ec7d696aa5cf173edbcb1486ab"
 dependencies = [
+ "atomic-waker",
  "bytes",
  "fnv",
  "futures-core",
  "futures-sink",
- "futures-util",
  "http",
  "indexmap",
  "slab",
@@ -1052,7 +1058,7 @@ dependencies = [
  "regex",
  "retry",
  "rust-embed",
- "rustix 0.38.30 (git+https://github.com/Kernel-SU/rustix.git?branch=main)",
+ "rustix 0.38.34",
  "serde",
  "serde_json",
  "sha256",
@@ -1073,9 +1079,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.152"
+version = "0.2.156"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "13e3bf6590cbc649f4d1a3eefc9d5d6eb746f5200ffb04e5e142700b8faa56e7"
+checksum = "a5f43f184355eefb8d17fc948dbecf6c13be3c141f20d834ae842193a448c72a"
 
 [[package]]
 name = "libflate"
@@ -1120,9 +1126,9 @@ checksum = "f051f77a7c8e6957c0696eac88f26b0117e54f52d3fc682ab19397a8812846a4"
 
 [[package]]
 name = "linux-raw-sys"
-version = "0.4.13"
+version = "0.4.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01cda141df6706de531b6c46c3a33ecca755538219bd484262fa09410c13539c"
+checksum = "78b3ae25bc7c8c38cec158d1f2757ee79e9b3740fbc7ccf0e59e4b08d793fa89"
 
 [[package]]
 name = "lock_api"
@@ -1204,9 +1210,9 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "0.8.10"
+version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f3d0b296e374a4e6f3c7b0a1f5a51d748a0d34c85e7dc48fc3fa9a87657fe09"
+checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
 dependencies = [
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
@@ -1426,7 +1432,7 @@ dependencies = [
  "hex",
  "lazy_static",
  "procfs-core",
- "rustix 0.38.30 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustix 0.38.30",
 ]
 
 [[package]]
@@ -1652,20 +1658,20 @@ dependencies = [
  "bitflags 2.4.1",
  "errno 0.3.8",
  "libc",
- "linux-raw-sys 0.4.13",
+ "linux-raw-sys 0.4.14",
  "windows-sys 0.52.0",
 ]
 
 [[package]]
 name = "rustix"
-version = "0.38.30"
-source = "git+https://github.com/Kernel-SU/rustix.git?branch=main#0e270bce2d97466be6b987bb5f7ea5b1e8d84969"
+version = "0.38.34"
+source = "git+https://github.com/Kernel-SU/rustix.git?branch=main#4a53fbc7cb7a07cabe87125cc21dbc27db316259"
 dependencies = [
  "bitflags 2.4.1",
  "errno 0.3.8",
  "itoa",
  "libc",
- "linux-raw-sys 0.4.13",
+ "linux-raw-sys 0.4.14",
  "once_cell",
  "windows-sys 0.52.0",
 ]
@@ -2183,7 +2189,7 @@ dependencies = [
  "either",
  "home",
  "once_cell",
- "rustix 0.38.30 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustix 0.38.30",
  "windows-sys 0.48.0",
 ]
 
